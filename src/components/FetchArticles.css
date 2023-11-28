@@ -1,0 +1,14 @@
+.fetch-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .fetch-articles__message {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+    color: #888;
+  }
+  

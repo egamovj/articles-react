@@ -1,0 +1,123 @@
+*,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(101, 0, 94) 3%, rgb(60, 132, 206) 38%, rgb(48, 238, 226) 68%, rgb(255, 25, 25) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+  }
+
+  @keyframes l13{ 
+    100%{transform: rotate(1turn)}
+  }
+  @keyframes l17 { 
+    100%{transform: rotate(1turn)}
+  }
+  @keyframes l2 {
+     100% {transform:rotate(calc(var(--s,1)*1turn))}
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+.article-card {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    
+  }
+  
+  .article-card__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .article-card__image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  
+  .article-card__text {
+    flex-grow: 1;
+    color: black;
+  }
+  
+  .article-card__source {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .article-card__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .article-card__summary {
+    margin-bottom: 8px;
+  }
+  
+  .article-card__published {
+    font-style: italic;
+    color: #555;
+  }
+  
+  .loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite;
+    margin: 300px auto;
+  }
+  .loader::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    animation: prixClipFix 2s linear infinite ;
+  }
+
+  @keyframes rotate {
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
